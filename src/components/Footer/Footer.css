@@ -1,0 +1,19 @@
+*{
+    --primary:#31333B;
+    --secondary:#3D3E42;
+    --heading:#DFDFDF;
+    --para:#A8A8A8;
+    --button:#F0BF6C;
+}
+
+.footer{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    background: var(--primary);
+}
+.footer p{
+    color: var(--button);
+    font-size: .8rem;
+    text-align: center;
+}

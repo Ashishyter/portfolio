@@ -1,0 +1,169 @@
+* {
+  --primary: #31333b;
+  --secondary: #3d3e42;
+  --heading: #dfdfdf;
+  --para: #a8a8a8;
+  --button: #f0bf6c;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1400px; /* Adjust as needed */
+  margin: 0 auto;
+}
+.slides-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s linear;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  bottom: 2rem;  
+  right: 5rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  color: var(--heading);
+}
+
+.controls button:hover {
+  color: var(--button);
+}
+
+.controls .previous {
+  order: 1;
+  font-size: 1.6rem;
+}
+.controls .play-pause {
+  order: 2;
+  font-size: 2.6rem;
+  margin-top: 0.25rem;
+}
+.controls .next {
+  order: 3;
+  font-size: 1.6rem;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 3rem; /* Adjust position */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: var(--heading);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--button);
+}
+
+.image-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.678),rgba(0, 0, 0, 0.274));
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  color: var(--heading);
+}
+.image-text {
+  width: 50%;
+}
+.image-text .hello {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.image-text h1 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+}
+.image-text h1 span {
+  color: var(--button);
+}
+.image-text p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+.image-text button {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 0.9rem;
+  border: 0.12rem solid var(--button);
+  background: transparent;
+  color: var(--button);
+  cursor: pointer;
+  outline: 0;
+  margin-top: 1rem;
+  transition: 0.4s;
+}
+.image-text button:hover {
+  background: var(--button);
+  color: var(--primary);
+}
+@media screen and (max-width: 1245px) {
+  .image-text .hello {
+    font-size: 1rem;
+  }
+  .image-text h1 {
+    font-size: 2.5rem;
+  }
+  .image-text p {
+    font-size: 0.7rem;
+  }
+
+  
+}
+@media screen and (max-width: 950px) {
+  .image-slider { 
+    height: 25rem;
+    background: var(--primary);
+  }
+  .controls,
+  .slider-dots , .slides-container{
+    display: none;
+  }
+  .image-shadow{
+    background: var(--primary);
+  }
+  .image-text {
+  
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+   
+  }
+  
+}

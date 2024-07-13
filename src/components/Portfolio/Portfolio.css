@@ -1,0 +1,125 @@
+* {
+  --primary: #31333b;
+  --secondary: #3d3e42;
+  --heading: #dfdfdf;
+  --para: #a8a8a8;
+  --button: #f0bf6c;
+}
+.portfolio-section {
+  width: 100%;
+  height: fit-content;
+  padding: 2rem 5rem;
+  background: var(--secondary);
+  text-align: center;
+}
+
+.portfolio-section h1 {
+  color: var(--heading);
+}
+.portfolio-tiles {
+  margin-top: 1rem;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  background: var(--secondary);
+  height: fit-content;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.portfolio {
+   
+  flex-shrink: 0;
+  height: 15rem;
+  width: 20rem;
+  background: var(--secondary);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.048);
+  border: 1px solid var(--primary);
+  color: var(--para);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.one {
+  background-image: url("../../assets/portfolio-1.png");
+  
+}
+.two{
+  background-image: url("../../assets/portfolio-2.png");
+}
+.three{
+  background-image: url("../../assets/portfolio-3.png");
+}
+.four{
+  background-image: url("../../assets/portfolio-4.png");
+}
+.five{
+  background-image: url("../../assets/portfolio-5.png");
+}
+.six{
+  background-image: url("../../assets/portfolio-6.png");
+}
+
+.portfolio div{
+  padding: 3rem 0;
+  background: #00000048;
+  backdrop-filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+ 
+}
+.portfolio:hover div{
+  bottom: 0%;
+}
+
+.portfolio h1,p{
+  color: var(--heading);
+}
+
+.portfolio-tiles button{
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 0.9rem;
+  border: 0.12rem solid var(--primary);
+  background: var(--button);
+  color: var(--primary);
+  cursor: pointer;
+  outline: 0;
+  transition: 0.4s;
+}
+
+.portfolio-tiles button:hover{
+  background: transparent;
+  color: var(--heading);
+  border-color: var(--heading);
+}
+
+ 
+.portfolio-section .view-more-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 0.9rem;
+  border: 0.12rem solid var(--button);
+  background: var(--button);
+  color: var(--primary);
+  cursor: pointer;
+  outline: 0;
+  transition: 0.4s;
+}
+.portfolio-section .view-more-btn:hover {
+  background: var(--secondary);
+  color: var(--heading);
+  border-color: var(--heading);
+}
